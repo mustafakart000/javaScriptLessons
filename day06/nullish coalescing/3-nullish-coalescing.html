@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nullish</title>
+</head>
+<body>
+    <script>
+        let salary = 0;
+        alert(salary ?? 15000);//null veya undefined değilse ikinci seceneği verir aksi ise 1. seceneği goreceksiniz
+        //nullish yontemi  ile null veya undefined degerleri ile ikinci duruma girer.
+        salary ?? alert("boş geçilemez 1") // farklı bir kullanımı
+        //short circuit
+        salary || alert("boş geçilemez 2") // salary false oldugu için sağ tarafı yazdırıyor
+
+            //============================================
+        //nullish version
+        alert(salary ?? 15000)
+        //ternary version
+        alert(salary != null && salary != undefined ? salary:15000);
+        //if version
+        if (salary != null && salary != undefined){
+            alert(salary);
+        }
+
+    </script>
+</body>
+</html>

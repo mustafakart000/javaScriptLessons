@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>optional chaining</title>
+</head>
+<body>
+    <script>
+        const user = {
+            name: "John Doe",
+            age:  32,
+            salary:{
+                amount:1000,
+                currency:'USD',
+                tax:15
+            },
+            empty:NaN
+        }
+
+        console.log(user);
+        console.log(user.age); // 32
+        console.log(user.name); // John Doe
+        console.log(user.salary.amount); // 1000
+        console.log(user.salary.amount); // 1000
+        //olmayan chaining
+        console.log(user.address)//undefined
+        //console.log(user.address.city)//TypeError: Cannot read property 'city' of undefined
+        //if içinde undefined false anlamına gelir 
+        //optional chaining ten once kullanılan if yöntemi
+        if (user.address){
+            console.log(user.address.city);
+        }
+
+        //optional chaining yontemi ile
+        console.log(user.address?.city); // bir soru işareti ile yukardaki if'in gorevini yapıyor
+    </script>
+
+</body>
+</html>

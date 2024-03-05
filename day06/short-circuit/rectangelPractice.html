@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //kontrolsüz yontem
+        function setArea(a,b){
+            const result = a * b;
+            return result;
+        }
+        const Area = setArea(30,2);// paremetereler boş bırakılırsa veya beklenen paremeterelerin dışında değerler girilirse NaN Undefined gibi değerler ile karşılaşıyoruz.
+        console.log(Area); 
+        const Area2 = setArea();// paremetereler boş bırakılırsa veya beklenen paremeterelerin dışında değerler girilirse NaN Undefined gibi değerler ile karşılaşıyoruz.
+        console.log(Area2);
+
+        //undefined  hatasını almak için nullish yontem kullanarak
+        function setArea2(a,b){
+            const result = (a??0) * (b??0);
+            // a ve b değerleri, null veya undefined ise 0 olsun kabulunu gerçekleştirdik
+            return result;
+        }
+        const Area3 = setArea2(30,2);// paremetereler boş bırakılırsa veya beklenen paremeterelerin dışında değerler girilirse NaN Undefined gibi değerler ile karşılaşıyoruz.
+        console.log(Area3); 
+        const Area4 = setArea2();// paremetereler boş bırakılırsa veya beklenen paremeterelerin dışında değerler girilirse NaN Undefined gibi değerler ile karşılaşıyoruz.
+        console.log(Area4);
+    </script>
+</body>
+</html>
