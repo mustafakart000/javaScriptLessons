@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getAge1() {
+            alert(`My age is ${2023-2000}`);
+        } 
+        function getAge2(birthYear) {
+            alert(`My age is ${2023-birthYear}`);
+        }
+        //getAge1();
+        getAge2(2002)
+
+        function getAge3() {
+            const dateTime =  new Date();
+            const currentYear = dateTime.getFullYear();
+            console.log(dateTime);
+            alert(`My age is ${2023-2000}`);
+            //single responsibility değil cunku hem yas hesaplıyor hemde yazdırıyor
+        }
+        getAge3();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="" id="txtNumber">
+    <button onclick="caculate()">Calculate</button>
+
+    <script>
+
+        const txtNumber = document.querySelector("#txtNumber");
+
+        function caculate(){
+            let num = Math.abs(txtNumber.value);
+            let total =0;
+            while (num>0) {
+                const digit = num % 10
+                total +=digit;
+                num = Math.floor(num/10);
+                console.log(num);
+            }
+
+            alert(num);
+            
+            
+        }
+    </script>
+</body>
+</html>

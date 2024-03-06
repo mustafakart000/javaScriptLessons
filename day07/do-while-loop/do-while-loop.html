@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>AD</h1>
+    <input type="number" id="enterFactoriel" placeholder="enter a factoriel number">
+    <button id="caculate" onclick="caculate()">calculate</button>
+    <h3 id="result" >factoriel result: </h3>
+    <script>
+        function caculate(){
+            let numParam=document.querySelector("#enterFactoriel").value;
+            console.log("num",numParam);
+            console.log(typeof(numParam));
+
+            let num = !numParam || isNaN(numParam) || numParam<0 ? 0 : numParam;
+            console.log("num",num);
+            console.log(typeof(num))
+            let factoriel=1;
+            do {
+                factoriel = factoriel*num;
+                num--;
+                console.log(factoriel)
+            } while (num>0);
+            
+            let result = document.querySelector("#result");
+            result.innerText= String(factoriel);
+        }
+        
+        
+    </script>
+</body>
+</html>

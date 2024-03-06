@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="txtNum">
+    <button onclick="calculate()">calculate</button>
+    <h1 id="result"> result</h1>
+    <script>
+        let  num;
+        function calculate(){
+            num = document.getElementById("txtNum").value;
+             bl = isPrimeNumber(num);
+            console.log(typeof(bl));
+            document.querySelector("#result").innerText= bl==true ?  " prime ": "Not prime!!";
+            console.log("num",num)
+        }
+        
+        function isPrimeNumber(num){
+            if(!num || isNaN(num) || num<2) return false;
+
+            let result  = true;
+
+            for(let i=2; i<num;i++){
+                if(num % i == 0){
+                    result= false;
+                    break;
+                }
+  
+        }
+        console.log(result)
+        return result;
+        }
+    </script>
+</body>
+</html>
