@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting</title>
+</head>
+<body>
+    <script>
+
+        sayHello();
+        sayHello2(); // çağrılma
+        // declaration functionlar yukarda cağırılabilir.
+        function sayHello(){
+            alert("Hello1")
+        }
+        const sayHello2 = function(){ // tanımlama ??
+            alert("Expression Function  yontemi ile yukarda cağıralamaz")                 
+        }
+        // NOT:const ve let tanımlanmadan once cağıralamazlar!!!
+        //Hosting tanımlama kısmını başa alır değer kısmını almaz bu yüzden
+        // sayHello2() çalışmayacak çünkü  "const sayHello2 = function(){ .."
+            // bir atama var bu atamadan dolayı
+                
+            
+            //Var ile bir değişken tanımladığımız da kendisinden once bu değişkeni çağırabiliriz ve undefined 
+
+    </script>
+    
+</body>
+</html>
