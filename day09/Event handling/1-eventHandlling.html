@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- kullanılmayan 1.yontem -->
+    <button id="btnSayHello1" onclick="sayHello1()">say hello 1</button>
+    <!-- kullanılan 2. yontem  -->
+    <button id="btnSayHello2" >say hello 2</button>
+    <!-- kullanılan 3. yontem  -->
+    <button id="btnSayHello3" >say hello 3</button>
+    <!-- kullanılan 4. yontem  -->
+    <button id="btnSayHello4" >say hello 4</button>
+    <!-- kullanılan 5. yontem  -->
+    <button id="btnSayHello5" >say hello 5</button>
+    <script>
+        // 1.yontem
+        function sayHello1(){
+        alert("hello1")
+        }// 2.yontem
+        const sayHello2= ()=>{
+        alert("hello2")
+        };
+        document.querySelector("#btnSayHello2").onclick = sayHello2;
+        
+        // 3. yontem
+        document.querySelector("#btnSayHello3").onclick = () => {
+            alert("hello3")
+        };
+
+        //4. yontem en cok kullanılan yontem.
+        const sayHello4 = function(){
+            alert("hello4")
+        }
+        document.querySelector("#btnSayHello4").addEventListener("click",sayHello4)
+        
+        //5. yontem en cok kullanılan yontem.
+        const sayHello5 = function(){
+            alert("hello4")
+        }
+        document.querySelector("#btnSayHello5").addEventListener("click",()=>{
+            alert("hello5");
+        })
+
+
+    </script>
+    
+</body>
+</html>
