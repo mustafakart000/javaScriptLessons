@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person={
+            firstName: "ahmet",
+            lastName: "sabuncu",
+        }
+        const aliPerson= person;
+        aliPerson.firstName = "Ali";
+        aliPerson.lastName = "kemal";
+
+        console.log(person); // {firstName: 'ahmet', lastName: 'sabuncu'}
+        console.log(aliPerson);//{firstName: 'Ali', lastName: 'kemal'} 
+        console.log(aliPerson===person)
+
+        //Object'i create edersek yeni bir container oluşturur ve referencelar da değişir
+        const mustafaPerson= Object.create(person);
+        mustafaPerson.firstName ="Mustafa";
+        mustafaPerson.lastName ="kart";
+        console.log(mustafaPerson);
+        console.log(mustafaPerson === person);
+        console.log(person)
+
+        //Bir objeden tamamen bağımsız yeni bir obje oluşturmak için (shallow copy) Object.assing()
+        // yontemini kullanırıız.
+        const kamilPerson = Object.assign({}, mustafaPerson)
+        console.log(kamilPerson)
+        
+    </script>
+
+    </script>
+    
+</body>
+</html>

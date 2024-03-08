@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <h1 id="test1">Hello1</h1>
+    <h1 id="test2">Hello2</h1>
+    <script>
+        const employee = {
+            firstName: 'John',
+            lastName: "Gel",
+            birthDate:"01.01.2001",
+            salary: 10000,
+            increaseSalary : function(){
+                this.salary+=500;
+            },
+            displayName: function(){
+                return `${this.firstName} ${this.lastName}`;
+            },
+
+            department:{
+                name:'IT',
+                location:'New York'
+            }
+        }
+        employee.increaseSalary();
+        console.log(employee);
+        console.log(employee.displayName());
+        //this, fonksiyon içinde ve tek başına iken de window 'u tanımlar 
+        // windows document'inde başında gelir.
+        function test(){
+            console.log(this) // window objesine reference verir
+        }
+        test();
+        console.log(this) // tek basına iken de window objesine reference verir
+
+
+        // olay mahalli
+        //Event handler normaş fucntion olarak tanımlanırsa this ifadesi olayın olduğu reference verir
+        document.querySelector("#test1").addEventListener("click", function(e){
+            alert("Hello")
+            console.log(e.target) //target ifadesi, olay nerde olmus
+            console.log(this.innerText) // click eventi ile tetiklenen funksiya içindeki this referanslarını alır.
+                              // bu sayede kullanıcının eyleminden
+        })
+        //Event handler arrow fucntion olarak tanımlanırsa this ifadesi window'u reference verir
+        document.querySelector("#test2").addEventListener("click", (e)=>{
+            alert("Hello")
+            console.log(e.target)
+            console.log(this) // click eventi ile tetiklenen funksiya içindeki this referanslarını alır.
+                              // bu sayede kullanıcının eyleminden
+        })
+
+        console.log(employee.department.location) //new york gelir
+        
+    </script>
+</body>
+</html>
