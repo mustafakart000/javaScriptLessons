@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const courses = ["HTML", "CSS", "JavaScript", "Python", "React", "Vue", "Ruby","asd"];
+        console.log(courses);
+        console.log(courses[4]);
+        console.log(courses.length);
+        console.log(courses[length-1]);
+
+        //normalde const ile atanan data type'lar da değer değiştirelemez ancak,
+        //   courses değerinin reference değiştirilmediği için ve içindeki bir değer
+        //   değiştirildiği için assigment hatası almayız 
+        // 
+        courses[2]="BootStrapppp";
+        console.log(courses[2])
+
+        //ancak courses'a direk değer atarsak reference değiştirilmeye çalıştırılır bu yüzden
+        //  hata ile karsılık verir
+
+    </script>
+</body>
+</html>
