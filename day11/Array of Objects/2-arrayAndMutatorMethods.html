@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const cars = ["Porche", "BMW", "Ferrari", "Lamborghini"];
+        console.log(cars);
+        
+        console.log("==============push==============");
+        console.log(cars.push("Mercedes"));// add last element of list
+        console.log(cars);
+        console.log("==============pop==============");
+        console.log(cars.pop())// delete last element of list
+        console.log(cars)
+        console.log("==============shift==============");
+        console.log(cars.shift()); // remove first element from the array and return it
+        console.log(cars)
+        console.log("==============unshift============");
+        console.log(cars.unshift("mercedes"));//add first element from the array and return length
+        console.log(cars);
+        console.log("==========sortAndReverse=======");
+        console.log(cars.sort());
+        console.log(cars.reverse());
+        console.log("=============splice============");
+        //  splice(index to start , how many items will be deleted , item1,item2...)
+        
+        /*          
+        0: "mercedes"
+        1: "Lamborghini"
+        2: "Ferrari"
+        3: "BMW" */
+        console.log(cars.splice(2,3,"audi"));//remove element ferrari and BMW and add audi
+        console.log(cars);
+        console.log(cars.splice(2,0,"honda"));//remove element ferrari and add element honda
+        console.log(cars);
+
+    
+
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const cars = ["Porche", "BMW", "Ferrari","Porche","Ferrari", "Lamborghini"];
+
+        console.log(cars);
+        
+        console.log("==============concat==============");
+        const arr = cars.concat(["audi","Lamborgini"]);
+        console.log(cars, "", arr);
+        //(4) ['Porche', 'BMW', 'Ferrari', 'Lamborghini'] '
+        //' (6) ['Porche', 'BMW', 'Ferrari', 'Lamborghini', 'audi', 'Lamborgini']
+        console.log("==============include==============");
+        //if there is this element then return true
+        console.log(cars.includes("Ferrari"));  //true
+        console.log(cars.includes("Mercedes"));//false
+        
+        console.log("==============indexOf============");
+        //return the first index of that element if it exist otherwise returns -1
+        console.log(cars.indexOf("Ferrari"));   //2
+        console.log(cars.indexOf("Mercedes")); //-1
+        
+        console.log("============lastIndexOf===========");
+        //returns the last index of an element in array
+        console.log(cars.lastIndexOf("Ferrari"));     //4
+        console.log(cars.lastIndexOf("Mercedes"));    //-1   no Mercedes
+        console.log(cars.lastIndexOf("Porche"));      //3
+        
+        console.log("============join===========");
+        //it joins all elements of an array into a string and returns the result
+        console.log(cars.join("-"));//Porche-BMW-Ferrari-Porche-Ferrari-Lamborghini
+        console.log(cars.join());          // Porche,BMW,Ferrari,Porche,Ferrari,Lamborghini
+        
+        console.log("============keys================");
+        /* for(let i=0;i<cars.length;i++){
+            console.log(Object.keys(cars[i]));
+        }*/
+        console.log(Object.keys(cars));// [0, 1, 2, 3, 4]
+        
+        console.log("==============slice=============")
+        console.log(cars);//(6) ['Porche', 'BMW', 'Ferrari', 'Porche', 'Ferrari', 'Lamborghini']
+        console.log(cars.slice(2,4));//(2) ['Ferrari', 'Porche'] New Array
+        
+
+    
+
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select  id="ddlStudents"></select>
+    <script>
+        const student=[{
+            name: 'John',
+            age:  23,
+            gender : 'Male' 
+        }, {
+            name : "Emma",
+            age : 19,
+            gender : 'Female'
+        },{
+            name : "Robert",
+            age : 45,
+            gender : 'Male'
+        
+        }];
+
+        const ddlStudents = document.querySelector("#ddlStudents");
+        for (let i = 0; i < student.length; i++) {
+            // student[i].name bu ifadeyi kullanırsak her object'e ait name doner 
+            ddlStudents.innerHTML += `<option value="${i}">${student[i].name}</option>`;
+            // ancak sadece student yazarsak [object Object],[object Object],[object Object] 
+            // bu sekilde bir ifade doner
+            ddlStudents.innerHTML += `<option value="${i}">${student}</option>`;
+            
+        }
+        
+    </script>
+</body>
+</html>
