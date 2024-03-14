@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // iteration For
+        const arr = [12, 34, 56, 78, -90, 32, -24];
+        const calculate= (arrParam) =>{
+            let sumP = 0;
+            let sumN =0;
+            for (let i = 0; i < arrParam.length; i++) {
+                const element = arrParam[i];
+
+                if (arrParam[i]>0) {
+                    sumP += arrParam[i];
+                } else {
+                    sumN+= arrParam[i];
+                }
+                
+            }
+            return sumP+sumN;
+        }
+        console.log(calculate(arr))
+
+        console.log("=============for in=================")
+        //iteration for in
+        
+        for (const i in arr) {
+            console.log(arr[i])
+            
+        }
+        console.log("=============for of=================")
+        //for of
+        for (const value of arr) {
+            console.log(value)
+        }
+        
+        console.log("=============for of [entries()]=======")
+        arr2 = ["elephant", "tiger","lion", "zebra", "monkey"];
+        //for of
+        for (const [i,value] of arr2.entries()) {
+            console.log(i, value)
+        }
+        
+        console.log("=============for of String iteration=======")
+        for (const c of "hello javascript") {
+            console.log(c)   
+        }
+
+
+    </script>
+</body>
+</html>

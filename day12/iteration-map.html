@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const animals = ['cat', 'dog', 'elephant', 'tiger', 'monkey'];
+        const cb = (animal) => {
+            console.log(animal)
+        }
+        animals.map(cb)
+
+        // easy way
+        console.log("=========================")
+        const newAnimals =animals.map((animal)=>{
+            return animal.toUpperCase()+'_IS_COOL'
+        })
+        console.log(newAnimals)
+        console.log(typeof newAnimals)
+        console.log(typeof animals)
+        console.log(newAnimals === animals) // false gelir cunku reference
+        //aynı değil buda yeni bir array oluşturduğunun bir ispatıdır.
+
+
+    </script>
+</body>
+</html>

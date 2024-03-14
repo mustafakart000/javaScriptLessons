@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iteration for each</title>
+</head>
+<body>
+    <script>
+        const animals =  ['cat', 'dog', 'elephant', 'tiger', 'monkey'];
+
+        const  cb  = (animal) => {
+            console.log(animal)
+        }
+        animals.forEach(cb); // empty callback function
+
+        console.log("==============================")
+
+        // easy way
+        animals.forEach((animal,i)=>{
+            console.log(i, animal)
+        })
+        // call back bir fonction'ın başka bir function'ı paremetere olarak alması
+    </script>
+    
+</body>
+</html>

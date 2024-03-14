@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const products =[
+            {id:1 ,name: "laptop", price: 200000},
+            {id:2 ,name:"mobile",price:50000},
+            {id:3 ,name:"tv",price:70000},
+            {id:4 ,name:"headphone",price:4000},
+            {id:5 ,name:"speaker",price:6000},
+            {id:6 ,name:"mouse",price:35000},
+    ];
+
+            const newProducts = products.map((product)=>{
+                    if(product.price>500){
+                       product.price = (product.price*1.10).toFixed(2);
+                        return product;
+                    }else{
+                       product.price = (product.price*1.10).toFixed(2);
+                        return product;
+                    }
+            });
+
+            console.log(newProducts)
+            console.log(newProducts[0].price)
+// FİLTER
+
+
+    </script>
+</body>
+</html>
