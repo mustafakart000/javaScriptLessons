@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const products =[
+            {id:1 ,name: "laptop", price: 200000},
+            {id:2 ,name:"mobile",price:50000},
+            {id:3 ,name:"tv",price:70000},
+            {id:4 ,name:"headphone",price:4000},
+            {id:5 ,name:"speaker",price:6000},
+            {id:6 ,name:"mouse",price:35000},
+    ];
+
+    const priceList = [];
+for (let i = 0; i < products.length; i++) {
+    const product = products[i];
+    const copiedProduct =  Object.assign({},product) ; // Spread operatörüyle bir kopya oluştur
+    priceList.push(copiedProduct);
+}
+
+console.log(priceList);
+  
+               
+
+            const newProducts =priceList.map((product)=>{
+                    if(product.price>500){
+                       product.price = (product.price*1.10).toFixed(2);
+                        return product;
+                    }else{
+                       product.price = (product.price*1.10).toFixed(2);
+                        return product;
+                    }
+            });
+
+            console.log(newProducts)
+            console.log(newProducts[0].price)
+                //üstdeki function'ı okumaya almayınca aynı objeden devam ediyor 
+                // iki variable da bundan etlileniyor console'a yazdırıldıgında.
+            const newProducts2 =products.filter((product) => product.price>=500)
+            .map((product) => {
+                product.price*=1.50;
+                return product;
+            });
+            console.log(newProducts2);
+// FİLTER
+
+
+/* const products = [
+    { id: 1, name: "laptop", price: 200000 },
+    { id: 2, name: "mobile", price: 50000 },
+    { id: 3, name: "tv", price: 70000 },
+    { id: 4, name: "headphone", price: 4000 },
+    { id: 5, name: "speaker", price: 6000 },
+    { id: 6, name: "mouse", price: 35000 },
+]; */
+
+// Derin bir kopya oluşturmak için basit bir döngü kullanma
+
+
+    </script>
+</body>
+</html>

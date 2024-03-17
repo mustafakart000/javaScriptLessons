@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const bireyler =[
+            "Mustafa", "Murat","Ahmet", "mustafa2","Ayşe"
+    ];
+
+            const fitrele = function(harf){
+                const h = harf.toUpperCase();
+                const fitlrelenmis = bireyler.filter((b) =>b.startsWith(h));
+                return fitlrelenmis;
+            }
+            console.log(fitrele("m")); // MUSTAFA ve MURAT yazdırılacak
+            console.log(fitrele("A")); // AYŞE Ahmet yazdırılacak
+// FİLTER
+
+
+    </script>
+</body>
+</html>

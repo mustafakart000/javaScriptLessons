@@ -22,7 +22,32 @@
         console.log(typeof newAnimals)
         console.log(typeof animals)
         console.log(newAnimals === animals) // false gelir cunku reference
-        //aynı değil buda yeni bir array oluşturduğunun bir ispatıdır.
+        //aynı değil buda yeni bir array oluşturduğunun bir ispatıdır.  
+        
+        //hard way  
+        class Animal{
+            constructor(name){
+                this.name = name;
+            }
+            toString(){
+               return `${this.name} is cool`  
+            }
+        }
+        const cat = new Animal('cat');
+        console.log(`${cat}`);  // cat is cool
+
+        const dogs = [...animals].reverse().map(el=>new Animal(el));
+        console.log(dogs[0]);// tiger
+        console.log(dogs[4]);// monkey
+        console.log(dogs); // [Animal] [Animal, Animal, Animal, Animal, Animal]
+        console.log(typeof dogs); // object
+
+        /*
+          map metodundaki callback function i   çinde this kullanamazsınız.
+          Çünkü bu callback function normal javascript function olmadığında this nesnesini almaz.
+          Bu sebeple callback function içerisinde this kullanmak istiyorsanız arrow function kullanmanız gerekiyor.
+          Bu sebeple map metodunda this nesnesi global objeye referans verir.
+        */  
 
 
     </script>
