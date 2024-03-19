@@ -2,6 +2,7 @@ import {countries} from "../data/countries.js";
 
 const ddlCountries =document.querySelector("#ddlCountries");
 const tblCountry =document.querySelector("#tblCountry");
+const totalArea = document.querySelector("#totalArea")
 
 ddlCountries.addEventListener("change",(e)=>{
     const selectedValue = e.target.value
@@ -20,6 +21,7 @@ const loadData = () =>{
     }
     
     ddlCountries.innerHTML = options;
+    totalArea.innerHTML =getTotalArea().toFixed(2);
 }
 const fillCountryTable =(country)=>{
     const capitalCity = country.capital.join("-");
@@ -41,6 +43,10 @@ const fillCountryTable =(country)=>{
 const getCountry = (countryCode)=>{
     const filteredCountries = countries.filter((country)=> country.cca2  === countryCode);
     return  filteredCountries.length>0 ?  filteredCountries[0] : null;
+}
+const getTotalArea = () =>{
+    return  countries.reduce((total, country)=>{return total + country.area},0 )
+
 }
 
 loadData();
