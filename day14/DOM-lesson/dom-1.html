@@ -16,9 +16,31 @@
       voluptatum possimus enim quod excepturi quidem! Veritatis tenetur adipisci
       odio, quia nisi et ipsa!
     </p>
+
+    <article>
+        Quae, reprehenderit qui. Fuga at doloribus
+        accusamus necessitatibus libero, eius repellat ipsum, assumenda, animi
+        voluptatibus minus? Neque voluptas ea earum explicabo voluptatibus minima,
+        tempore accusantium corporis, quas voluptatum quos at, quidem rem dolores!
+        Quidem, temporibus enim! <strong>Bold text with strong.</strong>
+    </article>
+    
+
+    
     <script>
-        const WelcomeTextEl= document.getElementById("WelcomeText");
-        WelcomeTextEl.innerHTML +="***";
+        const WelcomeTextEl = document.getElementById("WelcomeText");
+      WelcomeTextEl.innerHTML += "***";
+      
+
+      //getELementsTagName
+      const articleEls = document.getElementsByTagName("article");
+      articleEls[0].innerHTML+="<b>Hello with b</b>";
+
+      // getElementsByClassName
+      const contactEls = document.getElementsByClassName("contact");
+        contactEls[0].innerHTML +="<b>Hi!</b> Hi!";
+
+
     </script>
   </body>
 </html>
